@@ -36,7 +36,7 @@ public class PlayerController {
     }
 
     // Función para añadir un trofeo a un jugador
-    @PostMapping("/addTrophy/{idPlayer}/{idTrophy}")
+    @PutMapping("/addTrophy/{idPlayer}/{idTrophy}")
     public void addTrophy(@PathVariable Integer idPlayer, @PathVariable Integer idTrophy) {
         playerService.addTrophies(idPlayer, idTrophy);
     }
